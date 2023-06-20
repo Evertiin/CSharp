@@ -6,67 +6,46 @@ namespace Teste
     {
         static void Main(string[] args)
         {
-
-            var texto = "Testando";
-            Console.WriteLine(texto);
-
-            var a = texto;
-            Console.WriteLine(a);
-
-            const string A = "Oe";
-            int idade = 25;
-            int idadee = int.Parse("100");
-            System.Console.WriteLine("idadee");
-            uint interioSem = (uint)idade;
-
-            Console.WriteLine(A);
+            int Pontuacao = 0;
+            System.Console.WriteLine("Bem vindo ao jogo de perguntas");
 
 
+            System.Console.WriteLine("Deseja participar?");
+            Console.WriteLine("1 - Opção 1");
+            Console.WriteLine("2 - Opção 2");
 
+            string opcao = Console.ReadLine();
 
-
-            object gol = 'A';
-            gol = 25;
-            Console.WriteLine(gol);
-
-            bool usuario = true;
-            if (usuario == false)
+            if (opcao == "1")
             {
-
-                Console.WriteLine("Falsa");
+                System.Console.WriteLine("Vamos começar");
             }
             else
             {
-                System.Console.WriteLine("AAA");
+                System.Console.WriteLine("Até a próxima");
+                return;
             }
-            while (true)
+
+
+            System.Console.WriteLine("Vamos a primeira pergunta");
+
+            System.Console.WriteLine("Quem descobriu o Brasil");
+
+            System.Console.WriteLine("(A) - Pedro Alavares Cabral");
+            System.Console.WriteLine("(B) - Dom Pedro II");
+            string pergunta1 = Console.ReadLine();
+
+            if (pergunta1 == "A" || pergunta1 == "a")
             {
-                if (usuario == false)
-                {
-                    System.Console.WriteLine("OK");
-                    break;
-                }
-                else
-                {
-                    System.Console.WriteLine("Verdadeiro");
-                    break;
-
-                }
-
+                System.Console.WriteLine("Acertouu");
+                Pontuacao += 5;
             }
-            System.Console.WriteLine("Oi");
-
-            int inteiro = 100;
-            inteiro += 10;
-            float real = 25.3f;
-
-            real = inteiro;
-            inteiro = Convert.ToInt32(real);
-            inteiro = (int)real;
-            System.Console.WriteLine(inteiro);
-            inteiro = int.Parse(real.ToString());
-
-
+            else
+            {
+                System.Console.WriteLine("Errou");
+                Pontuacao -= 5;
+            }
+            System.Console.WriteLine(Pontuacao);
 
 
 
